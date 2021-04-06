@@ -1,4 +1,4 @@
-// console
+// console output
 console.log('hello world');
 
 // alert and comment
