@@ -1,7 +1,6 @@
 // loops
 // while loops & for loops
 
-
 // while loops
 /*
 let num = 0;
@@ -10,7 +9,6 @@ while (num < 100) {
     console.log(num);
 }
 */
-
 
 // for loops
 /*
