@@ -1,7 +1,7 @@
 // conditionals, control flows (if else)
 
 // 18-35 is my target demographic
-// && AND
+// && AND  
 // || OR
 
 let age = prompt('What is your age?');
