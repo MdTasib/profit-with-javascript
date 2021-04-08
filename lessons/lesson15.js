@@ -1,4 +1,5 @@
 // Numbers in javascript
+
 let number = 10;
 console.log(number);
 
