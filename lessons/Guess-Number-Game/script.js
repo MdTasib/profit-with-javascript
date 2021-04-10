@@ -4,22 +4,22 @@
  * Done: Generate a random number 1 to 100 and save it to variable correctNumber
  * Done: Console whether the guess is too high, too low, or is correct inside playGame function
  * Done: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
- * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
- * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
- * TODO: Save the guess history in a variable called guess
+ * Done: Complete the showYouWon, showNumberAbove, showNumberBelow
+ * Done: Use the showYouWon... functions within displayResult to display the correct dialog
+ * Done: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
  */
 
 // Variable to store the list of guesses 
-
+let guesses = [];
 // Variable for store the correct random number
 let correctNumber = getRandomNumber();
 
 
 window.onload = function () {
     document.getElementById("number-submit").addEventListener("click", playGame);
-    document.getElementById("restart-game").addEventListener("click", initGame)
+    document.getElementById("restart-game").addEventListener("click", initGame);
 }
 
 /**
@@ -29,6 +29,7 @@ function playGame() {
     // *CODE GOES BELOW HERE *
     let numberGuess = document.getElementById('number-guess').value;
     displayResult(numberGuess);
+    saveGuessHistory(numberGuess);
 }
 
 /**
@@ -39,11 +40,11 @@ function playGame() {
 function displayResult(numberGuess) {
     console.log(correctNumber);
     if (numberGuess > correctNumber) {
-        console.log('too high');
+        showNumberAbove();
     } else if (numberGuess < correctNumber) {
-        console.log('too low');
+        showNumberBelow();
     } else if (numberGuess == correctNumber) {
-        console.log('correct');
+        showYouWon();
     }
 }
 
@@ -82,6 +83,8 @@ function getRandomNumber() {
  */
 function saveGuessHistory(guess) {
     // *CODE GOES BELOW HERE *
+    guesses.push(guess);
+    console.log(guesses);
 }
 
 /**
@@ -128,7 +131,8 @@ function showYouWon() {
      * HINT: Use the 'won' and text parameters 
      */
     // *CODE GOES BELOW HERE *
-
+    let dialog = getDialog("won", text);
+    console.log(dialog);
     document.getElementById("result").innerHTML = dialog;
 }
 
@@ -140,7 +144,7 @@ function showNumberAbove() {
      * HINT: Use the 'warning' and text parameters 
      */
     // *CODE GOES BELOW HERE *
-
+    let dialog = getDialog("warning", text);
     document.getElementById("result").innerHTML = dialog;
 }
 
@@ -152,6 +156,6 @@ function showNumberBelow() {
      * HINT: Use the 'warning' and text parameters 
      */
     // *CODE GOES BELOW HERE *
-
+    let dialog = getDialog("warning", text);
     document.getElementById("result").innerHTML = dialog;
 }
