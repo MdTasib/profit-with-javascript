@@ -7,8 +7,8 @@
  * Done: Complete the showYouWon, showNumberAbove, showNumberBelow
  * Done: Use the showYouWon... functions within displayResult to display the correct dialog
  * Done: Save the guess history in a variable called guess
- * TODO: Display the guess history using displayHistory() function
- * TODO: Use the initGame() function to restart the game
+ * Done: Display the guess history using displayHistory() function
+ * Done: Use the initGame() function to restart the game
  */
 
 // Variable to store the list of guesses 
@@ -30,6 +30,7 @@ function playGame() {
     let numberGuess = document.getElementById('number-guess').value;
     displayResult(numberGuess);
     saveGuessHistory(numberGuess);
+    displayHistory();
 }
 
 /**
@@ -56,6 +57,16 @@ function displayResult(numberGuess) {
  */
 function initGame() {
     // *CODE GOES BELOW HERE *
+    // Reset the correctNumber
+    // Reset the result dispaly
+    // Reset the guesses array
+    // Reset the guess history display
+    // Reset the input value
+    correctNumber = getRandomNumber();
+    resetResultContent();
+    guesses = [];
+    displayHistory();
+    document.getElementById('number-guess').value = '';
 }
 
 /**
@@ -84,22 +95,26 @@ function getRandomNumber() {
 function saveGuessHistory(guess) {
     // *CODE GOES BELOW HERE *
     guesses.push(guess);
-    console.log(guesses);
 }
 
 /**
  * Display guess history to user
  * HTML TO USE:
  * <ul class='list-group'>
- *  <li class='list-group-item'>You guessed {number}</li
+ *  <li class='list-group-item'>You guessed {number}</li>
  * </ul>
  * HINT: use while loop and string concatentation to create a list of guesses
  */
 function displayHistory() {
-    let index; // TODO
+    let index = guesses.length - 1;
     let list = "<ul class='list-group'>";
     // *CODE GOES BELOW HERE *
-    list += '</ul>'
+    while (index >= 0) {
+        list += "<li class='list-group-item'>" + "You guessed " + guesses[index] + "</li>";
+        index -= 1;
+    }
+
+    list += '</ul>';
     document.getElementById("history").innerHTML = list;
 }
 
