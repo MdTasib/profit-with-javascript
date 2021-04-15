@@ -7,3 +7,4 @@ function convertMinutesToSeconds(minutes) {
 
 console.log(convertMinutesToSeconds(2));
 console.log(convertMinutesToSeconds(3));
+console.log(convertMinutesToSeconds(1));
