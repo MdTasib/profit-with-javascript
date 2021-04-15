@@ -1,8 +1,14 @@
 // Make a function -- Convert Minutes to Seconds
 
+// function convertMinutesToSeconds(minutes) {
+//     const second = 60;
+//     return minutes * second;
+// }
+
+// or
+
 function convertMinutesToSeconds(minutes) {
-    const seconds = 60;
-    return minutes * seconds;
+    return minutes * 60;
 }
 
 console.log(convertMinutesToSeconds(2));
