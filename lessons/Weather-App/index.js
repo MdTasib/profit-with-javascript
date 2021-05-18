@@ -2,7 +2,7 @@
  * Weather App
  * DONE: Complete getWeatherData() to return json response Promise
  * Done: Complete searchCity() to get user input and get data using getWeatherData()
- * TODO: Complete showWeatherData() to set the data in the the html file from response
+ * Done: Complete showWeatherData() to set the data in the the html file from response
  */
 
 // API_KEY for maps api
