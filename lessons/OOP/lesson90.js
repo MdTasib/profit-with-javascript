@@ -1,4 +1,4 @@
-// Class and Class Inheritance
+// Class
 
 class User {
     constructor(firstName, lastName, hobbies) {
