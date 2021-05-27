@@ -15,7 +15,6 @@ class Beat {
 }
 
 
-
 /**
  * Button class that keeps track of the button color based on a press
  */
@@ -38,6 +37,8 @@ class Button {
      * Select function to set the background color and boxShadow
      */
     select = () => {
+        this.element.style.background = this.color;
+        this.element.style.boxShadow = `0px 0px 17px 0px ${this.color}`;
     }
 
     /**
