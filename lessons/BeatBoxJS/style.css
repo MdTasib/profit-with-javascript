@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background: url('./assets/background.jpeg');
+    background-position: cover;
 }
 
 .container {
@@ -22,8 +24,8 @@ body {
 }
 
 .beat {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     flex-basis: 29%;
     display: flex;
     justify-content: center;
