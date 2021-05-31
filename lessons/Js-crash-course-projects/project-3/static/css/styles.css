@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex-box-container img {
+    width: 20%;
+    border-radius: 30px;
+    margin: 10px;
+    transition: .5s;
+}
+
+.flex-box-container img:hover {
+    transition: .5s;
+    box-shadow: -1px 6px 35px darkblue;
+}
