@@ -10,7 +10,7 @@ body {
 }
 
 .flex-box-container img {
-    width: 20%;
+    width: 250px;
     border-radius: 30px;
     margin: 10px;
     transition: .5s;
@@ -19,4 +19,16 @@ body {
 .flex-box-container img:hover {
     transition: .5s;
     box-shadow: -1px 6px 35px darkblue;
+}
+
+.humanChoice {
+    box-shadow: -1px 6px 35px darkblue;
+}
+
+.botChoice {
+    box-shadow: -1px 6px 35px red;
+}
+
+.message {
+    font-size: 65px;
 }
