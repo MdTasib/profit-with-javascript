@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-6 {
+    flex-basis: 49%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    font-size: 22px;
+    border-radius: 10px 0px 10px 0px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(.90);
+    border-radius: 0px 10px 0px 10px;
+    transition: .5s;
+}
+
+.btn-primary {
+    background: cyan;
+}
+
+.btn-success {
+    background: greenyellow;
+}
+
+.btn-danger {
+    background: red;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-danger {
+    color: red;
+}
+
+.text-primary {
+    color: cyan;
+}
+
+.m-auto {
+    margin: 0 auto;
+}
+
+.m-2 {
+    margin: 2rem 0;
+}
+
+.pl-1 {
+    padding-left: 15px;
+}
+
+#your-box, #dealer-box {
+    border: 1px solid black;
+    height: 350px;
+}
+
+.board {
+    background-image: url('../images/9.jpg');
+    background-size: cover;
+    padding: 1px 0px;
+}
+
+table {
+    border: 1px solid black;    
+    padding: 2px;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}

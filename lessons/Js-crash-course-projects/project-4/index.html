@@ -4,15 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Black Jack</title>
+    <title>Blackjack</title>
 </head>
 
 <body>
 
-
+    <div class="container text-center">
+        <div>
+            <h2>Hey! Welcome ~ <strong class="text-success">Blackjack</strong></h2>
+            <h3><span id="balckjack-result">Let's Play</span></h3>
+        </div>
+        <div class="board">
+            <div class="row m-2 pl-1">
+                <div class="col-md-6" id="your-box">
+                    <h2>You : <span id="your-blackjack-result">0</span></h2>
+                </div>
+                <div class="col-md-6" id="dealer-box">
+                    <h2>Dealer : <span id="dealer-blackjack-result">0</span></h2>
+                </div>
+            </div>
+            <div class="row m-2">
+                <div class="m-auto">
+                    <button class="btn btn-success" id="blackjack-hit-button">Hit</button>
+                    <button class="btn btn-primary" id="blackjack-stand-button">Stand</button>
+                    <button class="btn btn-danger" id="blackjack-deal-button">Deal</button>
+                </div>
+            </div>
+        </div>
+        <div class="m-2">
+            <table class="m-auto text-center">
+                <h2 class="text-success">SCORE BOARD</h2>
+                <tr>
+                    <th>Wins</th>
+                    <th>Losses</th>
+                    <th>Draws</th>
+                </tr>
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draws">0</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
     <script src="./assets/js/script.js"></script>
 </body>
