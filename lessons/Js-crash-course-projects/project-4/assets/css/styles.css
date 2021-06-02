@@ -75,13 +75,13 @@ body {
 
 #your-box, #dealer-box {
     border: 1px solid black;
-    height: 450px;
+    height: 400px;
     color: white;
 }
 
 #your-box img, #dealer-box img {
     width: 100px;
-    height: 150px;
+    height: 135px;
     margin: 5px;
 }
 
