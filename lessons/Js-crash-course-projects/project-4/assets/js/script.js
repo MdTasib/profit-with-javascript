@@ -70,6 +70,9 @@ function blackjackDeal() {
 
     document.querySelector('#your-blackjack-result').style.color = 'white';
     document.querySelector('#dealer-blackjack-result').style.color = 'white';
+
+    document.querySelector('#balckjack-result').textContent = "Let's Play";
+    document.querySelector('#balckjack-result').style.color = 'black';
 }
 
 // Score update
@@ -163,6 +166,6 @@ function showResult(winner) {
         messageColor = 'yellow';
     }
 
-    document.querySelector('#balckjack-result').innerText = message;
+    document.querySelector('#balckjack-result').textContent = message;
     document.querySelector('#balckjack-result').style.color = messageColor;
 }
