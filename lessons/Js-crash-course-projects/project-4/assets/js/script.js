@@ -5,6 +5,9 @@ const blackjackGame = {
     'dealer': { 'scoreSpan': '#dealer-blackjack-result', 'div': '#dealer-box', 'score': 0 },
     'cards': ['2', '3', '3', '5', '6', '7', '8', '9', '10', 'k', 'j', 'q', 'a'],
     'cardsMap': { '2': 2, '3': 3, '3': 3, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'k': 10, 'j': 10, 'q': 10, 'a': [1, 11] },
+    'wins': 0,
+    'losses': 0,
+    'draws': 0
 }
 
 // Player
@@ -47,9 +50,6 @@ function showCard(card, activePlayer) {
 
 // Deal button
 function blackjackDeal() {
-    let winner = computeWinner();
-    showResult(winner);
-
     let yourImages = document.querySelector('#your-box').querySelectorAll('img');
     let dealerImages = document.querySelector('#dealer-box').querySelectorAll('img');
 
@@ -103,37 +103,43 @@ function dealerLogic() {
     showCard(card, DEALER);
     updateScore(card, DEALER);
     showScore(DEALER);
+
+    if (DEALER['score'] > 15) {
+        let winner = computeWinner();
+        showResult(winner);
+    }
 }
 
 // compute winner and return who just won
+// update the wins, draws and losses
 function computeWinner() {
     let winner;
 
     if (YOU['score'] <= 21) {
         // condition: higher score then dealer or dealer busts but you're 21 or under
         if (YOU['score'] > DEALER['score'] || (DEALER['score'] > 21)) {
-            console.log('you won');
+            blackjackGame['wins']++;
             winner = YOU;
 
         } else if (YOU['score'] < DEALER['score']) {
-            console.log('you lost');
+            blackjackGame['losses']++;
             winner = DEALER;
 
         } else if (YOU['score'] === DEALER['score']) {
-            console.log('You Drew');
+            blackjackGame['draws']++;
         }
 
         // condition: when user busts but dealer doesn't
     } else if (YOU['score'] > 21 && DEALER['score'] <= 21) {
-        console.log('You lost');
+        blackjackGame['losses']++;
         winner = DEALER;
 
         // condition: when you and the dealer busts
     } else if (YOU['score'] > 21 && DEALER['score'] > 21) {
-        console.log('You drew');
+        blackjackGame['draws']++;
     }
 
-    console.log('winner is', winner);
+    console.log(blackjackGame);
     return winner;
 }
 
