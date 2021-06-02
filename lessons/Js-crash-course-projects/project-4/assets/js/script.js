@@ -148,14 +148,17 @@ function showResult(winner) {
     let message, messageColor;
 
     if (winner === YOU) {
+        document.querySelector('#wins').textContent = blackjackGame['wins'];
         message = 'You Won!';
         messageColor = 'green';
         winSound.play();
     } else if (winner === DEALER) {
+        document.querySelector('#losses').textContent = blackjackGame['losses'];
         message = 'You Lost!';
         messageColor = 'red';
         lostSound.play();
     } else {
+        document.querySelector('#draws').textContent = blackjackGame['draws'];
         message = 'You Drew!';
         messageColor = 'yellow';
     }
